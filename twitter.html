@@ -1,0 +1,25 @@
+%include shared/header.html
+
+
+    <div class="navspacer"></div>
+    <div class="resrc-content">
+        <div class="resrc-style">
+            <div id="resources">
+                <div class="resrc-box">
+                    % for item in tweet_list:
+                    <li id="resrc-list">
+                        <a href="https://twitter.com/mynextofficial/status/{{item[2]}}">
+                            <div class="resrc-item">
+                                <p class="resrc-title">{{item[0]}}</p>
+                                <p>{{item[1]}}</p>
+                            </div>
+                        </a>
+                    </li>
+                    % end
+
+                </div>
+            </div>
+        </div>
+
+
+%include shared/footer.html

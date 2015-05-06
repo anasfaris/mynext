@@ -1,0 +1,31 @@
+%include shared/header.html
+    <!Header Container>
+    <div class="navspacer"></div>
+    <div>
+        <div class="carousel-div banner-3">
+            <div class="caption-resrc">
+                <h1 class="hidden-mobile">Resources</h1>
+                <p>These are the tools that are useful for entrepreneurs, stock investors, and money management.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="resrc-content">
+        <div class="resrc-style">
+            <div id="resources">
+                <div class="resrc-box">
+                    % for link in links:
+                    <li id="resrc-list">
+                        <a href="{{ link['link'] }}">
+                            <div class="resrc-item">
+                                <p class="resrc-title">{{ link['title'] }}</p>
+                                <p>{{ link['author'] }}</p>
+                            </div>
+                        </a>
+                    </li>
+                    % end
+                </div>
+            </div>
+        </div>
+
+%include shared/footer.html

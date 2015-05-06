@@ -1,0 +1,44 @@
+%include shared/header.html
+    % if not registered:
+    <!Header Container>
+    <div class="navspacer"></div>
+    <div class="reg-content">
+        <div class="btitle h1">MyNext Giveaway #1</div>
+        <form class="theform" role="form">
+            <div class="form-inner">
+                <div class="form-box">
+                    <div class="well well-sm field-area"><span class="glyphicon glyphicon-asterisk"></span>Required Field</div>
+                </div>
+                <div class="form-box">
+                    <label for="InputName" class="label-area">Name</label>
+                    <div class="input-group form-area">
+                        <input type="text" class="form-control" name="InputName" id="InputName" placeholder="Enter Name" required>
+                        <span class="input-group-addon"><span class="glyphicon glyphicon-asterisk"></span></span>
+                    </div>
+                </div>
+                <div class="form-box">
+                    <label for="InputEmail" class="label-area">Email</label>
+                    <div class="input-group form-area">
+                        <input type="email" class="form-control" id="InputEmailFirst" name="InputEmail" placeholder="Enter Email" required>
+                        <span class="input-group-addon"><span class="glyphicon glyphicon-asterisk"></span></span>
+                    </div>
+                </div>
+                <div class="form-box">
+                    <label for="InputUni" class="label-area">University</label>
+                    <div class="input-group form-area">
+                        <input type="text" class="form-control" id="InputUni" name="InputUni" placeholder="Enter Your University" required>
+                        <span class="input-group-addon"><span class="glyphicon glyphicon-asterisk"></span></span>
+                    </div>
+                </div>
+                <div class="form-box">
+                    <input type="submit" name="submit" id="submit" value="Submit" class="btn btn-primary center-block">
+                </div>
+            </div>
+        </form>
+    %else:
+    <div class="navspacer"></div>
+    <div class="reg-content">
+        <div class="btitle h1">You have registered!</div>
+    %end
+
+%include shared/footer.html
